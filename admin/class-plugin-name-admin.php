@@ -127,4 +127,16 @@ class Plugin_Name_Admin
 		// return subpage views
 		require_once('partials/submenu-page.php');
 	}
+	
+/**
+	 * Register custom fileds for plugin settings
+	 *
+	 * @since    1.0.0
+	 */
+	public function register_wp10_general_settings() {
+		// register all settings for general settings page
+		register_setting( 'wp10customsettings', 'theemail');
+		register_setting( 'wp10customsettings', 'thedays');
+		register_setting( 'wp10customsettings', 'themultiselect');
+	}
 }
