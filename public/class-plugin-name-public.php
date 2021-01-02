@@ -102,8 +102,19 @@ class Plugin_Name_Public {
 
 	// first hello world shortcode
 	public function public_hello_world() {
-		// just say hello
-		echo 'Hello world';
+		// gets the general settings options
+		$user_days = get_option('thedays');
+		$user_email = get_option('theemail');
+
+		// VIEW
+		// different message based on day
+		if ($user_days == 1) {
+			echo 'User: ' . $user_email . ' Monday';
+		} elseif ($user_days == 2) {
+			echo 'User: ' . $user_email . ' Tuesday';
+	 	} else {
+			echo 'User: ' . $user_email . ' Today';
+		 }
 	}
 
 }
