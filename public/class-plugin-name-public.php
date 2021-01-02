@@ -100,4 +100,10 @@ class Plugin_Name_Public {
 
 	}
 
+	// first hello world shortcode
+	public function public_hello_world() {
+		// just say hello
+		echo 'Hello world';
+	}
+
 }
